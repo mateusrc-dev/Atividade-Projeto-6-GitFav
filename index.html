@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitFav</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+  <script src="./js/script.js" type="module"defer></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img class="logo" src="./images/logo.svg" alt="imagem da logo">
+      <div class="search">
+        <label class="sr-only" for="input-search">Usuário do GitHub</label>
+        <input type="text" id="input-search" placeholder="Digite o Github username que quer favoritar">
+        <button class="button">
+          <img src="./images/estrela.svg" alt="imagem de uma estrela">
+          <span>FAVORITAR</span>
+        </button>
+      </div>
+    </header>
+      <div class="table">
+        <div class="table2">
+          <span class="users">Usuário</span>
+          <span class="repos">Repositories</span>
+          <span class="follow">Followers</span>
+          <span class="acao">Ação</span>
+        </div>
+      </div>
+    <div class="scroll">
+      <div class="box">
+        <img class="user" src="https://github.com/maykbrito.png" alt="imagem do maykbrito">
+        <a class="link" href="https://github.com/maykbrito" target="_blank">
+          <p class="name">Mayk Brito</p>
+          <span class="linkname">/maykbrito</span>
+        </a>
+        <span class="repositories">76</span>
+        <span class="followers">9578</span>
+        <span class="remov"><button class="remove">Remover</button></span>
+      </div>
+      <div class="box">
+        <img class="user" src="https://github.com/mateusrc-dev.png" alt="imagem do maykbrito">
+        <a class="link" href="https://github.com/maykbrito" target="_blank">
+          <p class="name">Mateus Carvalho</p>
+          <span class="linkname">/mateusrc-dev</span>
+        </a>
+        <span class="repositories">76</span>
+        <span class="followers">9578</span>
+        <span class="remov"><button class="remove">Remover</button></span>
+      </div>
+      <div class="box">
+        <img class="user" src="https://github.com/diego3g.png" alt="imagem do maykbrito">
+        <a class="link" href="https://github.com/diego3g" target="_blank">
+          <p class="name">Diego Fernando</p>
+          <span class="linkname">/diego3g</span>
+        </a>
+        <span class="repositories">76</span>
+        <span class="followers">9578</span>
+        <span class="remov"><button class="remove">Remover</button></span>
+      </div>
+      <div class="box2">
+        <img src="./images/estrelasorrindo.svg" alt="estrela sorrindo">
+        <span>Nenhum favorito ainda!</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #000000;
+  font-size: 1.6;
+  color: #E1E1E6;
+  overflow-y: hidden;
+}
+
+body * {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; 
+  border-width: 0;  
+}
+
+#app {
+  padding: 2rem;
+  max-width: 112.0rem;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4.0rem auto;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+header div input {
+  width: 46.2rem;
+  height: 4.8rem;
+  padding: 1.6rem;
+  background-color: #06181C;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+header div button {
+  display: flex;
+  align-items: center;
+  width: 17.0rem;
+  height: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  border: none;
+  border-radius: 0.5rem; 
+  background-color: #065E7C;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  transition: background 0.5s; 
+  cursor: pointer;
+}
+
+header div button:hover {
+  background: #0c87af;
+}
+
+.logo {
+  width: 18.628rem;
+  height: 3.275rem;
+}
+
+.table {
+  position: relative;
+  margin-top: 6.5rem;
+  width: 100%;
+  overflow: hidden;
+  font-size: 2.0rem;
+  border: 1px solid #4A808C;
+  background: #092D38;
+  font-weight: 700;
+  text-align: left;
+  padding: 1.6rem 4.0rem;
+  display: flex;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+
+.table2 .users {
+  position: absolute;
+  margin-left: 46.4rem;
+}
+
+.table2 .repos {
+  position: absolute;
+  margin-left: 68.2rem;
+}
+
+.table2 .follow {
+  position: absolute;
+  margin-left: 86.7rem;
+}
+
+.scroll {
+  width: 100%;
+  max-height: 35.7rem;
+  display: flex; /*para a sobreposição funcionar é necessário que seja adicionado o display flex*/
+  flex-direction: column;
+  overflow-y: overlay; /*para fazer a sopreposição da barra*/
+  overflow-x: hidden;
+  border: 1px solid #4A808C;
+  border-top: none;
+  border-left: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 2.5rem;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #4A808C;
+  border-radius: 20px;
+  width: 1px;
+  background-clip: padding-box; /*para as bordas ficarem transparentes e com isso dar a impressão que tem uma margem nos lados da borda*/
+  border: 1rem solid rgba(0, 0, 0, 0);
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #6cb5c6;
+  border-radius: 20px;
+  width: 1px;
+  background-clip: padding-box; /*para as bordas ficarem transparentes e com isso dar a impressão que tem uma margem nos lados da borda*/
+  border: 1rem solid rgba(0, 0, 0, 0);
+}
+
+.box {
+  position: relative;
+  width: 200.0rem;
+  height: 9.4rem;
+  padding: 1.6rem 4.0rem;
+  border: 1px solid #4A808C;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  border-bottom: none;
+  align-items: center;
+}
+
+.box:first-child {
+  border-top: none;
+}
+
+.box:last-child {
+  border-bottom: none;
+}
+
+
+.box:nth-child(odd) {
+  background: #040e12;
+}
+
+.box:nth-child(even) {
+  background: #06181C;
+}
+
+
+.user {
+  width: 5.6rem;
+  height: 5.6rem;
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
+.link {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #E1E1E6;
+  gap: 0.5rem;
+  font-size: 2.0rem;
+  font-weight: 700;
+  margin: 0 0 0 11.2rem;
+}
+
+.link .linkname {
+  font-weight: 400;
+}
+
+.repositories {
+  position:absolute;
+  color: #E1E1E6;
+  font-weight: 700;
+  font-size: 2.0rem;
+  margin: 0 0 0 50.5rem;
+}
+
+.followers {
+  position:absolute;
+  color: #E1E1E6;
+  font-weight: 700;
+  font-size: 2.0rem;
+  margin: 0 0 0 72.5rem;
+}
+
+.remov {
+  position:absolute;
+  margin: 0 0 0 91rem;
+}
+
+.remove {
+  border: none;
+  background: none;
+  color: #F75A68;
+  font-weight: 700;
+  font-size: 2.0rem;
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+.remove:hover {
+  color: #ff939c;
+}
+
+.box2 {
+  border-left: 1px solid #4A808C;
+  background-color: #030B0D;
+  color: #4E5455;
+  font-weight: 700;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3.0rem;
+  line-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4.0rem;
+  color: #4E5455;
+  height: 62.4rem;
+}
+
+.none {
+  display: none;
+}
+
+
