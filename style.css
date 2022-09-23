@@ -128,11 +128,12 @@ tbody {
   display: flex; /*para a sobreposição funcionar é necessário que seja adicionado o display flex*/
   flex-direction: column;
   overflow-y: overlay; /*para fazer a sopreposição da barra*/
-  border: 0px solid #4A808C;
+  border: 1px solid #4A808C;
   border-top: none;
   border-left: none;
+  border-right: none;
   border-radius: 0 0 10px 10px;
-  height: 30rem;
+  height: 30.7rem;
 }
 
 tbody::-webkit-scrollbar {
@@ -159,7 +160,7 @@ tbody tr {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 3rem 4.0rem;
+  padding: 2rem 4.0rem;
   border: 1px solid #4A808C;
   border-bottom: none;
   color: #E1E1E6;
