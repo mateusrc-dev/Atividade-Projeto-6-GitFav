@@ -14,6 +14,15 @@ load() {
   } else if (this.entries.length != 0) {
     box2.classList.add('none');
   }
+  if (this.entries.length > 3) {
+    const tbody = document.querySelector('tbody')
+    tbody.classList.add('border')
+  } 
+  if (this.entries.length < 3) {
+    const tbody = document.querySelector('tbody')
+    tbody.classList.remove('border')
+  } 
+
 }
 
 save() {
@@ -28,16 +37,17 @@ async add(username) { //função assíncrona
     }
     const user = await GithubUser.search(username)
     if (user.login === undefined) {
+      const box2 = document.querySelector('.box2')
+      box2.classList.remove('none')
       throw new Error('Usuário não encontrado!')
     }
-
+    
     this.entries = [user, ...this.entries]
     
     if (this.entries.length > 3) {
       const tbody = document.querySelector('tbody')
       tbody.classList.add('border')
     } 
-    
 
     this.update()
     this.save()
