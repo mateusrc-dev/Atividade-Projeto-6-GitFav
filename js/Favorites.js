@@ -44,9 +44,9 @@ delete(user) {
   if (this.entries.length == 0) {
     const box2 = document.querySelector('.box2')
     box2.classList.remove('none')
-  }
-  this.update()
+  } 
   this.save()
+  this.update()
 }
 
 }
@@ -55,7 +55,7 @@ delete(user) {
 export class FavoritesView extends Favorites {
   constructor(root) { //no parâmetro root tem o id app que foi passado como argumento
     super(root)
-    this.body = this.root.querySelector('.scroll') //pegando a parte que tem os usuários e colocando em body
+    this.body = this.root.querySelector('tbody') //pegando a parte que tem os usuários e colocando em body
     this.update() //chamando a função que faz as atualizações no html
     this.onadd() //função que pega os o nome do usuário que inserimos no input
   }
@@ -92,24 +92,29 @@ update() { //função que faz as atualizações no HTML
 }
 
 createRow() { //através dessa função vamos criar as linhas com os dados
-  const rows = document.createElement('div') //criando um novo elemento e colocando os dados nele, vamos depois mudar esses dados
-  rows.classList.add('box')
+  const rows = document.createElement('tr') //criando um novo elemento e colocando os dados nele, vamos depois mudar esses dados
+  rows.classList.add('rows')
   const data = `
-  <img class="user" src="https://github.com/diego3g.png" alt="imagem do maykbrito">
-  <a class="link" href="https://github.com/diego3g" target="_blank">
-    <p class="name">Diego Fernando</p>
-    <span class="linkname">/diego3g</span>
-  </a>
-  <span class="repositories">76</span>
-  <span class="followers">9578</span>
-  <span class="remov"><button class="remove">Remover</button></span>
+  <td class="row">
+            <div>
+            <img class="user" src="https://github.com/maykbrito.png" alt="imagem do maykbrito">
+            </div>
+            <div>
+            <a class="link" href="https://github.com/maykbrito" target="_blank">
+            <p class="name">Mayk Brito</p>
+            <span class="linkname">/maykbrito</span></a>
+            </div>
+          </td>
+          <td class="repositories">76</td>
+          <td class="followers">9578</td>
+          <td class="remov"><button class="remove">Remover</button></td>
   `
   rows.innerHTML = data
   return rows
 }
 
 removeAllbox() {
-  this.body.querySelectorAll('.box').forEach((box) => {box.remove()}) //pegando todos os usuários do arquivo index.html e deletando
+  this.body.querySelectorAll('.rows').forEach((rows) => {rows.remove()}) //pegando todos os usuários do arquivo index.html e deletando
 }
 }
 
