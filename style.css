@@ -138,7 +138,7 @@ tbody {
 }
 
 .border {
-  border-bottom: 2px solid #4A808C;
+  border-bottom: 1px solid #4A808C;
 }
 
 tbody::-webkit-scrollbar {
