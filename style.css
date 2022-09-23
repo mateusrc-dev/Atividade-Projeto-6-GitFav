@@ -132,8 +132,13 @@ tbody {
   border-top: none;
   border-left: none;
   border-right: none;
+  border-bottom: none;
   border-radius: 0 0 10px 10px;
   height: 30.7rem;
+}
+
+.border {
+  border-bottom: 1px solid #4A808C;
 }
 
 tbody::-webkit-scrollbar {

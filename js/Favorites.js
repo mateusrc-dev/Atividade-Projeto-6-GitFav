@@ -30,7 +30,15 @@ async add(username) { //função assíncrona
     if (user.login === undefined) {
       throw new Error('Usuário não encontrado!')
     }
+
     this.entries = [user, ...this.entries]
+    
+    if (this.entries.length > 3) {
+      const tbody = document.querySelector('tbody')
+      tbody.classList.add('border')
+    } 
+    
+
     this.update()
     this.save()
   } catch (error) {
@@ -72,6 +80,10 @@ onadd() { //função que pega os o nome do usuário que inserimos no input
 
 update() { //função que faz as atualizações no HTML
   this.removeAllbox() //precisamos começar tirando todos os box que estão no index.html
+  if (this.entries.length < 3) {
+    const tbody = document.querySelector('tbody')
+    tbody.classList.remove('border')
+  } 
   this.entries.forEach(user => {
     const row = this.createRow()
     row.querySelector('.user').src = `https://github.com/${user.login}.png`
