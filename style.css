@@ -252,9 +252,16 @@ tbody tr td .link {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4.0rem;
+  gap: 6.0rem;
   color: #4E5455;
   height: 62.4rem;
+}
+
+.box2 td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
 }
 
 .none {
