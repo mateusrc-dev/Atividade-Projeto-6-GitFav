@@ -6,7 +6,7 @@ export class Favorites {
     this.load()
   }
 
-load() {
+load() { //só pra comentar memso
   this.entries = JSON.parse(localStorage.getItem('@github/favorites:')) || []
   const box2 = document.querySelector('.box2')
   if (this.entries.length == 0) {
